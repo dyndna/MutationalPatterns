@@ -5,6 +5,15 @@
 #' @param ref_genome BSGenome reference genome object 
 #' @return 96 mutation count matrix
 #' @import GenomicRanges
+#'
+#' @examples
+#' #' # Make 96 trinucleodide mutation count matrix
+#' tri_matrix = mut_matrix(vcf_list = vcfs, ref_genome = ref_genome)
+#'
+#' @seealso \code{\link{estimate_rank}}
+#'          \code{\link{fit_to_signatures}}
+#'          \code{\link{extract_signatures}}
+#'
 #' @export
 
 mut_matrix = function(vcf_list, ref_genome)

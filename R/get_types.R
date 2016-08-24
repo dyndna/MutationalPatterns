@@ -3,6 +3,12 @@
 #' A function to extract the base substitutions from a vcf and translate to the 6 common base substitution types
 #' @param vcf A CollapsedVCF object
 #' @return Character vector with base substitution types
+#'
+#' @examples
+#' get_types(vcf_obj)
+#'
+#' @seealso \code{\link{read_vcf}}
+#'
 #' @export
 
 get_types = function(vcf) 

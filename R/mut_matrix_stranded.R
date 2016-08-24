@@ -7,6 +7,14 @@
 #' @param genes Granges with definition of gene bodies, should include strand information
 #' @return 192 mutation count matrix (96 * 2 strands)
 #' @import GenomicRanges
+#'
+#' @examples
+#' # Create a mutation count matrix with transcriptional strand information
+#' mut_mat_s = mut_matrix_stranded(vcfs, ref_genome, genes_hg19)
+#' # Perform strand bias analysis
+#' strand_counts = strand_occurences(mut_mat_s, by=tissue)
+#'
+#' @seealso \code{\link{strand_occurences}}
 #' @export
 
 mut_matrix_stranded = function(vcf_list, ref_genome, genes)

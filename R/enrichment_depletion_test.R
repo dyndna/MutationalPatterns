@@ -6,6 +6,15 @@
 #' @return Data.frame with the observed and expected number of mutations per genomic region per group (by) or sample
 #' @importFrom BiocGenerics cbind
 #' @importFrom BiocGenerics rbind
+#' @examples
+#' # Calculate the number of observed and expected number of mutations in each genomic regions for each sample
+#' distr = genomic_distribution(vcfs, surveyed_list, regions)
+#' # Test for significant enrichment or depletion in the genomic regions
+#' # Samples can be collapsed into groups. Here the analysis is performed per tissue type
+#' distr_test = enrichment_depletion_test(distr, by = tissue)
+#'
+#' @seealso \code{\link{genomic_distribution}}
+#'
 #' @export
 
 enrichment_depletion_test = function(x, by = c())

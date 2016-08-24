@@ -19,6 +19,15 @@
 #' @importFrom ggplot2 element_blank
 #' @importFrom ggplot2 element_text
 #' @importFrom BiocGenerics cbind
+#'
+#' @examples
+#' # # Make 96 trinucleodide mutation count matrix
+#' tri_matrix = mut_matrix(vcf_list = vcfs, ref_genome = ref_genome)
+#' # Plot 96 profile of three samples
+#' plot_96_profile(tri_matrix[,c(1,4,7)])
+#'
+#' @seealso \code{\link{mut_matrix}} \code{\link{extract_signatures}}
+#'
 #' @export
 
 plot_96_profile = function(mut_matrix, colors, ymax = 0.15)

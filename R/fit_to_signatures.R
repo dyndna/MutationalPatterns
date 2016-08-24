@@ -5,6 +5,15 @@
 #' @param signatures Signature matrix (dimensions: 96 mutations X n signatures)
 #' @return Named list with signature contributions and reconstructed mutation matrix
 #' @importFrom pracma lsqnonneg
+#'
+#' @examples
+#' # Make 96 trinucleodide mutation count matrix
+#' tri_matrix = mut_matrix(vcf_list = vcfs, ref_genome = ref_genome)
+#' # Fit the mutation matrix to cancer signatures
+#' fit_res = fit_to_signatures(test_matrix, cancer_signatures)
+#'
+#' @seealso \code{\link{mut_matrix}}
+#'
 #' @export
 
 fit_to_signatures = function(mut_matrix, signatures)

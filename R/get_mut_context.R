@@ -6,6 +6,12 @@
 #' @return Character vector with the context of the base substitutions
 #' @importFrom GenomeInfoDb seqlevels
 #' @importFrom Biostrings getSeq
+#'
+#' @examples
+#' get_mut_context(vcf_obj, ref_genome)
+#'
+#' @seealso \code{\link{read_vcf}}
+#'
 #' @export
 
 get_mut_context = function(vcf, ref_genome) 

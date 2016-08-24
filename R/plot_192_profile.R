@@ -20,6 +20,15 @@
 #' @importFrom ggplot2 element_blank
 #' @importFrom ggplot2 element_text
 #' @importFrom BiocGenerics cbind
+#'
+#' @examples
+#' # # Extract signatures with a rank of 2
+#' nmf_res_strand = extract_signatures(mut_mat_s, rank = 2)
+#' # plot signatures with 192 features
+#' plot_192_profile(nmf_res_strand$signatures)
+#'
+#' @seealso \code{\link{mut_matrix}} \code{\link{extract_signatures}}
+#'
 #' @export
 
 plot_192_profile = function(mut_matrix, colors, ymax = 0.15)

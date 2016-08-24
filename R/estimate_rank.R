@@ -5,6 +5,15 @@
 #' @param rank_range Range of ranks one would like to test 
 #' @param nrun Number of runs to perform, default=100
 #' @return NMF rank survey plot
+#'
+#' @examples
+#' # Make a mutation count matrix
+#' my_matrix = mut_matrix(vcf_list = vcfs, ref_genome = ref_genome)
+#' # Estimate optimal rank for NMF mutation matrix decomposition
+#' estimate_rank(my_matrix, rank_range = 2:5, nrun = 50)
+#'
+#' @seealso \code{\link{mut_matrix}}
+#' 
 #' @export
 
 estimate_rank = function(mut_matrix, rank_range, nrun=100)

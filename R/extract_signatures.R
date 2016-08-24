@@ -8,6 +8,20 @@
 #' @importFrom NMF nmf
 #' @importFrom NMF basis
 #' @importFrom NMF coef
+#'
+#' @examples
+#' # Make 96 trinucleodide mutation count matrix
+#' tri_matrix = mut_matrix(vcf_list = vcfs, ref_genome = ref_genome)
+#' # Extract the signatures
+#' nmf_res = extract_signatures(tri_matrix, rank = 3)
+#' # Provide signature names (optional)
+#' colnames(nmf_res$signatures) = c("Signature A", "Signature B")
+#' # Plot signatures
+#' plot_96_profile(nmf_res$signatures)
+#'
+#' @seealso \code{\link{mut_matrix}}
+#'          \code{\link{plot_96_profile}}
+#'
 #' @export
 
 extract_signatures = function(mut_matrix, rank, nrun = 200)

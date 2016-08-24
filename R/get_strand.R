@@ -8,6 +8,13 @@
 #' @param vcf Granges vcf object
 #' @param genes Granges with definition of gene bodies, should include strand information
 #' @return Character vector with transcriptional strand information with length of vcf: "-" for positions outside gene bodies, "U" for untranscribed/sense/coding strand, "T" for transcribed/anti-sense/non-coding strand
+#'
+#' @examples
+#' genes_hg19 = genes(TxDb.Hsapiens.UCSC.hg19.knownGene)
+#' get_strand(vcf_obj, genes_hg19)
+#' 
+#' @seealso \code{\link{read_vcf}}
+#' 
 #' @export
 
 get_strand = function(vcf, genes)

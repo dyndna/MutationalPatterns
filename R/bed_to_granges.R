@@ -6,6 +6,17 @@
 #' @return granges_list List of Granges objects
 #' @import GenomicRanges
 #' @import IRanges
+#'
+#' @examples
+#' # Read example file with surveyed/callable regions
+#' surveyed_file = list.files(dest_dir, pattern = ".bed", full.names = T)
+#' # Read bed file as granges object
+#' surveyed_list = bed_to_granges(surveyed_file, "surveyed_all")
+#' # For this example we use the same surveyed file for each sample
+#' surveyed_list = rep(surveyed_list, 9)
+#'
+#' @seealso \code{\link{genomic_distribution}}
+#'
 #' @export
 
 

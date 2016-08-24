@@ -4,6 +4,12 @@
 #' @param vcf A CollapsedVCF object
 #' @param ref_genome Reference genome
 #' @return Mutation types and context character vectors in a named list
+#'
+#' @examples
+#' get_type_context(vcf_obj, ref_genome)
+#'
+#' @seealso \code{\link{read_vcf}}
+#'
 #' @export
 
 get_type_context = function(vcf, ref_genome)

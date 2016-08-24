@@ -3,8 +3,15 @@
 #' @param vcf_list A list of CollapsedVCF object
 #' @param ref_genome Reference genome
 #' @return Dataframe with counts of each base substitution type for each sample in vcf_list
-#' @export
 #' @import BiocGenerics
+#'
+#' @examples
+#' # Count mutation type occurences for one vcf object
+#' type_occurences = mut_type_occurences(vcf_obj, ref_genome)
+#' # Count mutation type occurences for all samples in a list of vcf objects
+#' type_occurences = mut_type_occurences(vcfs, ref_genome)
+#'
+#' @export
 
 mut_type_occurences = function(vcf_list, ref_genome)
 {  
